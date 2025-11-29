@@ -11,7 +11,7 @@ class GenerateValues:
 
     def generate(self):
         value = round(random.uniform(self.min_value, self.max_value), 2)
-        timestamp = datetime.datetime.now().isoformat()
+        timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
         data = {
             "sensor_type": self.sensor_type,
             "value": value,
