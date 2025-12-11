@@ -19,10 +19,6 @@ with open('config.csv', mode='r') as file:
         )
         sensors.append(sensor)
 
-
-
-# print(f"Loaded {(sensor.generate())} sensors from configuration.")
 while True:
     for sensor in sensors:
-        # print(sensor.generate())
         send_data_to_aws(sensor.generate())
